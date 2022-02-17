@@ -1,0 +1,18 @@
+ALGORITHM checkpoint
+VAR
+    str_length,word,vowels:INTEGER;
+    str:STRING;
+BEGIN
+    str_length:=0;
+    word:=1;
+    vowels:=0;
+    read(str);
+    do
+        IF (str[str_length]=' ') THEN
+            word:=word+1;
+        ELSE IF(str[str_length]='e' or str[str_length]='a' or str[str_length]='i' or str[str_length]='o' or str[str_length]='u')
+            vowels:=vowels+1;
+        END_IF
+        str_length:=str_length+1;
+    while(str[str_length]<>'.')
+END
